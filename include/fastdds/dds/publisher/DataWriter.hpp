@@ -207,9 +207,6 @@ public:
             void* data,
             const fastrtps::rtps::InstanceHandle_t& handle);
 
-    RTPS_DllAPI bool dispose(
-            void* data);
-
     RTPS_DllAPI ReturnCode_t get_liveliness_lost_status(
             LivelinessLostStatus& status);
 
