@@ -165,6 +165,13 @@ const option::Descriptor usage[] = {
 int main(int argc, char** argv)
 {
     int columns;
+    
+if (strcmp(argv[1], "publisher") == 0)
+{
+    std::cout << "*************** ADOLFO: rm '/private/tmp/boost_interprocess/*'" << std::endl;
+    system("rm '/private/tmp/boost_interprocess/*'");
+    system("ls /private/tmp/boost_interprocess/*");
+}
 
 #if defined(_WIN32)
     char* buf = nullptr;
@@ -510,6 +517,13 @@ int main(int argc, char** argv)
     {
         std::cout << "SOMETHING WENT WRONG" << std::endl;
     }
+
+if (strcmp(argv[0], "publisher") == 0)
+{
+    std::cout << "ADOLFO: ls '/private/tmp/boost_interprocess/*'" << std::endl;
+    system("ls /private/tmp/boost_interprocess/*");
+}
+
 
     return return_code;
 }
